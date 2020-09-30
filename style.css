@@ -10,7 +10,7 @@
 
 body {
   color: black;
-  background-color: white;
+  background-color: #292F33;
   margin: 0;
   padding: 0;
 }
@@ -123,7 +123,7 @@ main {
 }
 
 .navbar:hover .logo svg {
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
 }
 
 /* Small screens */
@@ -148,6 +148,12 @@ main {
 
   main {
     margin: 0;
+  }
+
+  .choosen{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
   }
 }
 
@@ -179,6 +185,8 @@ main {
   }
 }
 
+
+/* THEME
 .dark {
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
@@ -215,8 +223,4 @@ main {
 .solar #solarIcon {
   display: block;
 }
-
-#news a{
-  margin-top: -100px;
-  width: 100%;
-}
+*/
