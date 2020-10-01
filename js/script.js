@@ -1,4 +1,4 @@
-
+/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('http://localhost:5500/js/sw_cached_page.js')
@@ -6,8 +6,9 @@ if ('serviceWorker' in navigator) {
         .catch(err => console.log('Service worker error:'));
   });
 }
+*/
 
-
+navigator.serviceWorker.register('./sw.js');
 
 
 /*SCROLL TO TOP ANIMATION WHEN IN THE SAME PAGE*/

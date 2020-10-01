@@ -1,4 +1,7 @@
 
+
+
+/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%
 const cacheName = 'v1';
 
 // define the items
@@ -52,3 +55,4 @@ self.addEventListener('fetch', e => {
     caches.match(e.request);
   }))
 })
+*/
