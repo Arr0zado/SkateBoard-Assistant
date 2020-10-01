@@ -3,7 +3,7 @@
 	"lang" : "en",
 	"scope" : "/",
 	"name" : "SK8PRO",
-	"short_name": "SK8",
+	"short_name": "SK8PRO",
 	"display" : "standalone",
 	"start_url" : "https://www.sk8pro.tk/",
 	"theme_color" : "transparent",
