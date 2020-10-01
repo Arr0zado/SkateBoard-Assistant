@@ -1,5 +1,4 @@
 const cacheName = 'SK8PRO V1';
-const tudo = (new RegExp('/*'));
 const cacheAssets = [
   'index.html',
   'css/style.css',
@@ -23,7 +22,7 @@ self.addEventListener('install', e => {
       .open(cacheName)
       .then(cache => {
         console.log('Service Worker: Caching Files');
-        cache.addAll(tudo);
+        cache.addAll(cacheAssets);
       })
       .then(() => self.skipWaiting())
   );
