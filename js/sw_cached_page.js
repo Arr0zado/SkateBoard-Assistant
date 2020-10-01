@@ -1,57 +1,47 @@
-
-
-
-/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%*/
 const cacheName = 'v1';
 
-// define the items
-
 const cacheAssets = [
-  "https://www.sk8pro.tk/index.html",
-  "https://www.sk8pro.tk/tabs/tricks.html",
-  "https://www.sk8pro.tk/css/style.css",
-  "https://www.sk8pro.tk/js/script.js"
+  '../index.html',
+  '../tabs/*',
+  '../css/style.css',
+  '../js/script.js'
 ];
 
-// call install event of service worker
-
-self.addEventListener('install', () => {
-  console.log("Service Worker Installed");
+// Call Install Event
+self.addEventListener('install', e => {
+  console.log('Service Worker: Installed');
 
   e.waitUntil(
     caches
       .open(cacheName)
       .then(cache => {
-        console.log("Service Worker : Caching Files");
+        console.log('Service Worker: Caching Files');
         cache.addAll(cacheAssets);
       })
-    .then(() => self.skipWaiting())
+      .then(() => self.skipWaiting())
   );
 });
 
-// call activate event of service worker
-
+// Call Activate Event
 self.addEventListener('activate', e => {
-  console.log("Service Worker Activated")
-
-  //Remove the old caches
-
+  console.log('Service Worker: Activated');
+  // Remove unwanted caches
   e.waitUntil(
-    caches.keys.map(cache => {
-      if (cache !== cacheName) {
-        console.log("Service Worker: Clearing Old Cache")
-        return caches.delete(cache);
-      }
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          if (cache !== cacheName) {
+            console.log('Service Worker: Clearing Old Cache');
+            return caches.delete(cache);
+          }
+        })
+      );
     })
-  )
-})
+  );
+});
 
-//call fetch event 
-
+// Call Fetch Event
 self.addEventListener('fetch', e => {
-  console.log("Service Worker Fetching");
-
-  e.respondWith(fetch(e.request).catch(() => {
-    caches.match(e.request);
-  }))
-})
+  console.log('Service Worker: Fetching');
+  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+});
