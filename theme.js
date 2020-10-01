@@ -11,7 +11,7 @@ $('.choosen').on('click', function () {
   }, 1000);
 });
 
-
+turbolinks.start();
 
 
 /* THEME
