@@ -1,7 +1,5 @@
-
-/*FUNCIONA!
 const cacheName = 'SK8PRO V1';
-
+const tudo = (new RegExp('/*'));
 const cacheAssets = [
   'index.html',
   'css/style.css',
@@ -25,7 +23,7 @@ self.addEventListener('install', e => {
       .open(cacheName)
       .then(cache => {
         console.log('Service Worker: Caching Files');
-        cache.addAll(cacheAssets);
+        cache.addAll(tudo);
       })
       .then(() => self.skipWaiting())
   );
@@ -54,22 +52,3 @@ self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
   e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 });
-
-*/
-
-const CACHE = "pwabuilder - v1";
-
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
-});
-
-workbox.routing.registerRoute(
-  new RegExp('/*'),
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: CACHE
-  })
-);
