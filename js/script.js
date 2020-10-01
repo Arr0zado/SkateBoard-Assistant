@@ -1,25 +1,11 @@
-/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%
+/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%*/
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('http://localhost:5500/js/sw_cached_page.js')
+      navigator.serviceWorker.register('https://www.sk8pro.tk/js/sw_cached_page.js')
         .then(reg => console.log('Service Worker: Registered'))
         .catch(err => console.log('Service worker error:'));
   });
 }
-*/
-// app.js
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('js/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-
 
 /*SCROLL TO TOP ANIMATION WHEN IN THE SAME PAGE*/
 $('.choosen').on('click', function () {

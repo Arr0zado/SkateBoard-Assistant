@@ -1,16 +1,16 @@
 
 
 
-/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%
+/* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%*/
 const cacheName = 'v1';
 
 // define the items
 
 const cacheAssets = [
-  "http://localhost:5500/index.html",
-  "http://localhost:5500/tabs/tricks.html",
-  "http://localhost:5500/css/style.css",
-  "http://localhost:5500/js/script.js"
+  "https://www.sk8pro.tk/index.html",
+  "https://www.sk8pro.tk/tabs/tricks.html",
+  "https://www.sk8pro.tk/css/style.css",
+  "https://www.sk8pro.tk/js/script.js"
 ];
 
 // call install event of service worker
@@ -55,4 +55,3 @@ self.addEventListener('fetch', e => {
     caches.match(e.request);
   }))
 })
-*/
