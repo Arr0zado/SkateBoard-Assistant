@@ -1,5 +1,11 @@
 
-
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('http://localhost:5500/js/sw_cached_page.js')
+        .then(reg => console.log('Service Worker: Registered'))
+        .catch(err => console.log('Service worker error:'));
+  });
+}
 
 
 
@@ -11,6 +17,7 @@ $('.choosen').on('click', function () {
   }, 1000);
 });
 
+//ADD NATIVE SMOTHNESS
 turbolinks.start();
 
 
