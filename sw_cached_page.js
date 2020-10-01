@@ -1,7 +1,7 @@
 const cacheName = 'v1';
 
 const cacheAssets = [
-  '*',
+  '/*',
 ];
 
 // Call Install Event
