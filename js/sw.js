@@ -1,6 +1,11 @@
 // sw.js
 const cacheName = "SK8PRO - v1";
-const filesToCache = ["index.html"];
+const filesToCache = [
+  "https://www.sk8pro.tk/index.html",
+  "https://www.sk8pro.tk/css/style.css",
+  "https://www.sk8pro.tk/tabs/*",
+  "https://www.sk8pro.tk/js/script.js",
+  "https://www.sk8pro.tk/js/turbolinks.js"];
 
 self.addEventListener("install", function(event) {
   // Perform install steps
