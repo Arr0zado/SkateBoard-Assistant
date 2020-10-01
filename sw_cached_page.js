@@ -5,7 +5,8 @@ const cacheAssets = [
   'js/script.js',
   'js/turbolinks.js',
   'icons/apple-icon-144x144.png',
-  'icons/favicon-32x32.png'
+  'icons/favicon-32x32.png',
+  'tabs/'
 ];
 
 // Call Install Event
