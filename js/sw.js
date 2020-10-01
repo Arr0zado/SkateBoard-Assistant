@@ -1,38 +1,38 @@
-var cacheName = 'v1';
+// sw.js
+const cacheName = "SK8PRO - v1";
+const filesToCache = ["index.html"];
 
-var cacheAssets = [
-    '../index.html',
-    '../script.js',
-    '../style.css',
-    '../turbolinks.js',
-    '../tabs/*',
-];
-
-function precache() {
-    return caches.open(cacheName).then(function (cache) {
-        return cache.addAll(cacheAssets);
-    });
-}
-
-self.addEventListener('install', function(event) {
-    event.waitUntil(precache());
+self.addEventListener("install", function(event) {
+  // Perform install steps
+  console.log("[Servicework] Install");
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log("[ServiceWorker] Caching app shell");
+      return cache.addAll(filesToCache);
+    })
+  );
 });
 
-addEventListener('fetch', event => {
-  event.respondWith(async function() {
-      const cachedResponse = await caches.match(event.request);
-      if (cachedResponse) return cachedResponse;       
-      return fetch(event.request).then(updateCache(event.request));
-  }());
+self.addEventListener("activate", function(event) {
+  console.log("[Servicework] Activate");
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log("[ServiceWorker] Removing old cache shell", key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });
 
-function updateCache(request) {
-  return caches.open(cacheName).then(cache => {
-      return fetch(request).then(response => {
-          const resClone = response.clone();
-          if (response.status < 400)
-              return cache.put(request, resClone);
-          return response;
-      });
-  });
-}
+self.addEventListener("fetch", (event) => {
+  console.log("[ServiceWorker] Fetch");
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+
+});
