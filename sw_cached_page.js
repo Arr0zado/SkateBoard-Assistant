@@ -6,7 +6,14 @@ const cacheAssets = [
   'index.html',
   'css/style.css',
   'js/script.js',
-  'js/turbolinks.js'
+  'js/turbolinks.js',
+  'ajax/libs/jquery/3.3.1/jquery.min.js',
+  'css?family=Open+Sans:300,400,700&display=swap',
+  's/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2',
+  'aos@next/dist/aos.css',
+  'aos@next/dist/aos.js',
+  'icons/apple-icon-144x144.png',
+  'icons/favicon-32x32.png'
 ];
 
 // Call Install Event
