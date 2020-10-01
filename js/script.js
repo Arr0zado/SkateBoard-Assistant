@@ -1,7 +1,7 @@
 /* SERVICE WORKER INDIANO QUE SUPOSTAMENTE FUNCIONA 80%*/
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('https://www.sk8pro.tk/js/sw_cached_page.js')
+      navigator.serviceWorker.register('../sw_cached_page.js')
         .then(reg => console.log('Service Worker: Registered'))
         .catch(err => console.log('Service worker error:'));
   });
