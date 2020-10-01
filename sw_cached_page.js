@@ -4,6 +4,7 @@ const cacheAssets = [
   'index.html',
   'css/style.css',
   'js/script.js',
+  'tabs/*.*',
   'js/turbolinks.js'
 ];
 
