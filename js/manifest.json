@@ -5,7 +5,7 @@
 	"name" : "SK8PRO",
 	"short_name": "SK8PRO",
 	"display" : "standalone",
-	"start_url" : "https://www.sk8pro.tk/",
+	"start_url" : "https://www.sk8pro.tk",
 	"theme_color" : "transparent",
 	"description" : "SK8PRO - Start Skating",
 	"orientation" : "portrait",
