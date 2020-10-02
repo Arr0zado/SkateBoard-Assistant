@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  font-family: 'Open Sans Bold';
+  font-family: 'Droid Sans Bold';
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
@@ -232,6 +232,6 @@ main {
 */
 
 @font-face {
-  font-family: "Open Sans Bold";
-  src: url("../fonts/OpenSans-Bold.ttf");
+  font-family: "Droid Sans Bold";
+  src: url("../fonts/DroidSans-Bold.ttf");
 }
