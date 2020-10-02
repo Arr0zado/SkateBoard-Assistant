@@ -1,19 +1,19 @@
 const cacheName = 'SK8PRO V1';
 const cacheAssets = [
-  '/',
-  '/index.html',
-  '/tricks',
-  '/news',
-  '/settings',
-  '/chat',
-  'fonts/DroidSans-Bold.ttf',
-  'css/style.css',
-  'js/script.js',
-  'js/turbolinks.js',
-  'js/manifest.json',
-  'icons/apple-icon-144x144.png',
-  'images/banner.jpg',
-  'icons/favicon-32x32.png'
+  'https://www.sk8pro.tk',
+  'https://www.sk8pro.tk/index.html',
+  'https://www.sk8pro.tk/tricks',
+  'https://www.sk8pro.tk/news',
+  'https://www.sk8pro.tk/settings',
+  'https://www.sk8pro.tk/chat',
+  'https://www.sk8pro.tk/fonts/DroidSans-Bold.ttf',
+  'https://www.sk8pro.tk/css/style.css',
+  'https://www.sk8pro.tk/js/script.js',
+  'https://www.sk8pro.tk/js/turbolinks.js',
+  'https://www.sk8pro.tk/js/manifest.json',
+  'https://www.sk8pro.tk/icons/apple-icon-144x144.png',
+  'https://www.sk8pro.tk/images/banner.jpg',
+  'https://www.sk8pro.tk/icons/favicon-32x32.png'
 ];
 
 // Call Install Event
