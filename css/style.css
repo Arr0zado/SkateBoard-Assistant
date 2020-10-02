@@ -235,3 +235,20 @@ main {
   font-family: "Droid Sans Bold";
   src: url("../fonts/DroidSans-Bold.ttf");
 }
+
+.container{
+  position: relative; 
+  width: 1200px;
+  height: 300px;
+  margin: 240px auto;
+  background: #000;
+}
+
+.container .box{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: #ff0;
+  float: center;
+  margin: 15px;
+}
