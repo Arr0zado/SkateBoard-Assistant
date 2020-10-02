@@ -4,7 +4,7 @@
 	"scope" : "/",
 	"name" : "SK8PRO",
 	"short_name": "SK8PRO",
-	"display" : "standalone",
+	"display" : "fullscreen",
 	"start_url" : "https://www.sk8pro.tk",
 	"theme_color" : "transparent",
 	"description" : "SK8PRO - Start Skating",
