@@ -1,6 +1,7 @@
 const cacheName = 'SK8PRO V1';
 const cacheAssets = [
   '/',
+  'index.html',
   'tabs/tricks.html',
   'tabs/news.html',
   'tabs/settings.html',
@@ -9,8 +10,9 @@ const cacheAssets = [
   'css/style.css',
   'js/script.js',
   'js/turbolinks.js',
+  'js/manifest.json',
   'icons/apple-icon-144x144.png',
-  'icons/favicon-32x32.png',
+  'icons/favicon-32x32.png'
 ];
 
 // Call Install Event
