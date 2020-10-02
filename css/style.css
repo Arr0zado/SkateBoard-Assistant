@@ -257,3 +257,13 @@ main {
 .yellow-filter{
   filter: blur(0.2px) grayscale(100%) opacity(0.7) drop-shadow(0px 0px 0px  yellow);;
 }
+
+.goback{
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.icons8.com%2Fpastel-glyph%2F2x%2Fcircled-left.png&f=1&nofb=1") no-repeat;
+  position: absolute;
+  width: 25px; 
+  height: 25px;
+  margin-bottom: 30px;
+  top: 5px;
+  left: 5px;
+}
