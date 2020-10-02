@@ -12,6 +12,7 @@ const cacheAssets = [
   'js/turbolinks.js',
   'js/manifest.json',
   'icons/apple-icon-144x144.png',
+  'images/banner.jpg',
   'icons/favicon-32x32.png'
 ];
 
