@@ -5,7 +5,7 @@ const cacheAssets = [
   'tabs/news.html',
   'tabs/settings.html',
   'tabs/chat.html',
-  'fonts/OpenSans-Regular.ttf',
+  'fonts/DroidSans-Bold.ttf',
   'css/style.css',
   'js/script.js',
   'js/turbolinks.js',
