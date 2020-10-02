@@ -237,18 +237,23 @@ main {
 }
 
 .container{
-  position: relative; 
-  width: 1200px;
-  height: 300px;
-  margin: 240px auto;
-  background: #000;
+  background: url("../images/banner.jpg") no-repeat;
+  position: relative;
+  width: 100%; 
+  margin: 20px auto; 
+  height: 30%;
+  float: center;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.container .box{
+.container h1{
+  margin: 0 auto; 
   position: relative;
-  width: calc(400px - 30px);
-  height: calc(300px - 30px);
-  background: #ff0;
-  float: center;
-  margin: 15px;
+  top: 80%;
+  text-transform: uppercase;
+}
+.yellow-filter{
+  filter: blur(0.2px) grayscale(100%) opacity(0.7) drop-shadow(0px 0px 0px  yellow);;
 }

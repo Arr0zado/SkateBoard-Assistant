@@ -1,11 +1,11 @@
 const cacheName = 'SK8PRO V1';
 const cacheAssets = [
   '/',
-  'index.html',
-  'tabs/tricks.html',
-  'tabs/news.html',
-  'tabs/settings.html',
-  'tabs/chat.html',
+  '/index.html',
+  '/tricks',
+  '/news',
+  '/settings',
+  '/chat',
   'fonts/DroidSans-Bold.ttf',
   'css/style.css',
   'js/script.js',
